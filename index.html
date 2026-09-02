@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -92,12 +91,6 @@
         left: 50%;
 
         transform: translate(-50%, -50%);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        width: min(80%, 400px);
       }
 
       #unity-logo {
@@ -115,15 +108,6 @@
 
       #unity-progress-bar-full {
         background: #1B4489;
-      }
-
-      #unity-footer {
-        position: fixed;
-
-        bottom: env(safe-area-inset-bottom);
-        right: env(safe-area-inset-right);
-
-        z-index: 10;
       }
 
       #unity-container,
@@ -151,10 +135,6 @@
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
-      </div>
-
-      <div id="unity-footer">
-        <div id="unity-fullscreen-button"></div>
       </div>
 
     </div>
@@ -203,9 +183,6 @@
       var progressBarFull =
         document.querySelector("#unity-progress-bar-full");
 
-      var fullscreenButton =
-        document.querySelector("#unity-fullscreen-button");
-
       var unityInstance = null;
 
 
@@ -244,20 +221,6 @@
 
           loadingBar.style.display = "none";
 
-
-          /*
-           * Fullscreen button
-           */
-          if (fullscreenButton) {
-
-            fullscreenButton.onclick = () => {
-
-              unityInstance.SetFullscreen(1);
-
-            };
-
-          }
-
         }).catch((message) => {
 
           alert(message);
@@ -273,4 +236,3 @@
 
   </body>
 </html>
-```
