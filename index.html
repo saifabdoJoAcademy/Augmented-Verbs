@@ -81,24 +81,29 @@
         touch-action: none;
       }
 
-      /*
-       * Center the Unity logo and loading bar together.
-       */
       #unity-loading-bar {
-        position: absolute;
+        position: absolute !important;
 
-        top: 50%;
-        left: 50%;
+        top: 40% !important;
+        left: 50% !important;
 
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) !important;
+
+        width: 350px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
       }
 
       #unity-logo {
-        margin-bottom: 15px;
+        position: static !important;
+        margin-bottom: 12px !important;
       }
 
       #unity-progress-bar-empty {
-        width: 100%;
+        position: static !important;
+        width: 100% !important;
 
         background: #1B448933;
         border: 1px solid #1B4489;
