@@ -81,39 +81,44 @@
         touch-action: none;
       }
 
-      #unity-loading-bar {
-        position: absolute !important;
+#unity-loading-bar {
+  position: absolute !important;
 
-        top: 40% !important;
-        left: 50% !important;
+  top: 40% !important;
+  left: 50% !important;
 
-        transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
 
-        width: 350px !important;
+  width: 260px !important;
 
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-      }
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
 
-      #unity-logo {
-        position: static !important;
-        margin-bottom: 12px !important;
-      }
+#unity-logo {
+  position: static !important;
+  margin-bottom: 12px !important;
+  flex-shrink: 0 !important;
+}
 
-      #unity-progress-bar-empty {
-        position: static !important;
-        width: 100% !important;
+#unity-progress-bar-empty {
+  position: static !important;
+  width: 100% !important;
+  height: 18px !important;
+  flex-shrink: 0 !important;
 
-        background: #1B448933;
-        border: 1px solid #1B4489;
+  background: #1B448933;
+  border: 1px solid #1B4489;
+  border-radius: 9px;
 
-        box-sizing: border-box;
-      }
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
-      #unity-progress-bar-full {
-        background: #1B4489;
-      }
+#unity-progress-bar-full {
+  height: 100%;
+}
 
       #unity-container,
       #unity-canvas-container {
